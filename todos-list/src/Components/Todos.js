@@ -7,5 +7,5 @@ export const Todos = ({todoList}) => {
             <h3>Todos List</h3>
             <TodoItem todo={todoList[0]} />
         </div>
-    );
-};
+    )
+}
