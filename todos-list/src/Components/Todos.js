@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { TodoItem } from "./TodoItem";
 
-export const Todos = () => {
-  return (
-    <div>
-        Todos Works!
-    </div>
-  )
-}
+export const Todos = ({todoList}) => {
+    return (
+        <div className="container">
+            <h3>Todos List</h3>
+            <TodoItem todo={todoList[0]} />
+        </div>
+    );
+};
