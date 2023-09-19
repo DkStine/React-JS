@@ -1,11 +1,12 @@
 import React from 'react'
 
-export const TodoItem = ({todo}) => {
+export const TodoItem = ({todo, onDelete}) => {
   return (
-    <div>
-        <h4>{todo.sno} </h4>
-        <h3>{todo.title} </h3>
-        <p>{todo.work} </p>
+    <div className='my-3'>
+      <h3>{todo.sno} </h3>
+      <h4>{todo.title} </h4>
+      <p>{todo.work} </p>
+      <button className="btn btn-danger btn-sm" onClick={() => {onDelete(todo)}}>Delete</button>
     </div>
   )
 }
