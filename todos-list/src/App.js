@@ -5,6 +5,12 @@ import {Todos} from "./Components/Todos";
 import { Footer } from "./Components/Footer";
 import { AddTodo } from "./Components/AddTodo";
 import React, { useState } from 'react';
+import {
+  createBrowserRouter as Router,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 function App() {
   const onDelete = (todo) => {
@@ -40,7 +46,7 @@ function App() {
 
   const addTodo = (Title, Desc) =>{
     let sno;
-    
+
     todoList.length !== 0 ? sno = todoList[todoList.length - 1].sno + 1 : sno = 1;
 
     const newTodo = {
@@ -57,8 +63,10 @@ function App() {
   return (
     <>
       <Header title="To Dos List" searchBar={false} />
+
       <AddTodo addTodo={addTodo}/>
       <Todos todolist={todoList} onDelete = {onDelete} />
+
       <Footer/>
     </>
   );
